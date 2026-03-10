@@ -1,0 +1,12 @@
+# A list of package names that are allowed to execute
+# "preinstall", "install", and/or "postinstall" scripts during installation.
+# https://pnpm.io/settings#onlybuiltdependencies
+onlyBuiltDependencies:
+  - edgedriver
+  - esbuild
+  - geckodriver
+
+# Configure how versions of packages installed to a `package.json` file get prefixed.
+# Use exact versions of packages
+# https://pnpm.io/settings#saveprefix
+savePrefix: ""

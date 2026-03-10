@@ -1,0 +1,31 @@
+{
+  "name": "rx-check",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsdown",
+    "dev": "NODE_ENV=development tsx src/index.ts",
+    "lint": "concurrently --kill-others-on-fail --raw 'pnpm:lint:*'",
+    "lint:scripts": "oxfmt --check . && oxlint .",
+    "lint:types": "tsc",
+    "start": "NODE_ENV=production node dist/index.mjs"
+  },
+  "dependencies": {
+    "cli-table3": "0.6.5",
+    "meow": "14.1.0",
+    "playwright": "1.58.2"
+  },
+  "devDependencies": {
+    "@types/node": "25.3.3",
+    "concurrently": "9.2.1",
+    "oxfmt": "0.36.0",
+    "oxlint": "1.51.0",
+    "tsdown": "0.21.0-beta.2",
+    "tsx": "4.21.0",
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": "24.x"
+  },
+  "packageManager": "pnpm@10.30.3+sha512.c961d1e0a2d8e354ecaa5166b822516668b7f44cb5bd95122d590dd81922f606f5473b6d23ec4a5be05e7fcd18e8488d47d978bbe981872f1145d06e9a740017"
+}
