@@ -15,6 +15,17 @@ export function extractPrice(selector: string) {
   const element = document.querySelector(selector);
 
   if (element) {
+    // remove potential sibling/descendant elements polluting the price container
+    const toRemoveClasses = [".antes", ".contDiscount"];
+
+    for (const className of toRemoveClasses) {
+      const toRemove = element.querySelector(className);
+
+      if (toRemove) {
+        element.removeChild(toRemove);
+      }
+    }
+
     const priceText = (element.textContent ?? "").trim();
 
     // $1,234.56 MXN
