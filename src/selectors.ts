@@ -25,7 +25,11 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   { domain: "fahorro.com", selector: ".product-info-main .price-box .price" },
   { domain: "farmaciaalicia.com.mx", selector: ".product-block .price" },
   { domain: "farmaciasbazar.com", selector: ".precio" },
-  { domain: "farmaciacutem.com", selector: ".rtin-price-area .price :not(del) .amount bdi" },
+  {
+    domain: "farmaciacutem.com",
+    selector:
+      ".rtin-price-area .price ins .amount bdi, .rtin-price-area .price :not(del) .amount bdi",
+  },
   { domain: "farmaciasfleming.mx", selector: ".wpb_wrapper .price ins .amount bdi" },
   { domain: "farmaciagloria.mx", selector: '.current-price [itemprop="price"]' },
   { domain: "farmaciasguadalajara.com", selector: '[itemprop="price"]' },
