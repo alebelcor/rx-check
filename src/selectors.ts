@@ -22,8 +22,16 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   { domain: "dermamedina.com", selector: ".product__price-and-ratings [data-price]" },
   { domain: "dermatica.com.mx", selector: ".product-detail .price .amount" },
   { domain: "dermocutanea.com", selector: '[data-hook="product-prices-wrapper"] [data-wix-price]' },
-  { domain: "evaderm.com.mx", selector: "product-meta .price-list .price" },
+  {
+    domain: "emeritafarmacias.com",
+    selector: ".price > ins > .amount > bdi, .price > .amount > bdi",
+  },
+  { domain: "evaderm.com.mx", selector: ".product-meta .price-list .price" },
   { domain: "fahorro.com", selector: ".product-info-main .price-box .price" },
+  {
+    domain: "farmaciallceutica.com.mx",
+    selector: ".price > ins > .amount > bdi, .price > .amount > bdi",
+  },
   { domain: "farmaciaalicia.com.mx", selector: ".product-block .price" },
   { domain: "farmaciacoyoacan.com", selector: ".price__regular .price-item" },
   {
@@ -84,6 +92,10 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     domain: "mecdermafarmacia.com",
     selector: ".price__regular .price-item.price-item--regular",
   },
+  {
+    domain: "openfarma.mx",
+    selector: ".product__info-block :is(.price__sale, .price__regular) .price-item",
+  },
   { domain: "perfumesclub.com.mx", selector: ".totalMT2" },
   { domain: "prixz.com", selector: ".price .amount bdi" },
   { domain: "probemedic.mx", selector: "[data-price-amount] .price" },
@@ -104,7 +116,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   { domain: "vidafarmacias.com", selector: ".product-prices .price" },
   { domain: "walmart.com.mx", selector: '[itemprop="price"]' },
   { domain: "wecarepharma.mx", selector: ".price__current .money" },
-  { domain: "yza.mx", selector: ".large-price" },
+  { domain: "yza.mx", selector: '.price .value:not([content="null"])' },
 ] as const;
 
 export function getPriceSelector(hostname: string) {
