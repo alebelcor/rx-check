@@ -1,3 +1,4 @@
+// fix all .amount
 export const PRICE_SELECTORS_BY_DOMAIN = [
   { domain: "amanda.com.mx", selector: ".summary .price .amount" },
   { domain: "amazon.com.mx", selector: ".apex-core-price-identifier .a-offscreen" },
@@ -30,6 +31,11 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     selector:
       ".rtin-price-area .price ins .amount bdi, .rtin-price-area .price :not(del) .amount bdi",
   },
+  {
+    domain: "farmaciadechila.com",
+    selector:
+      ".product-information-inner .price .amount bdi, .product-information-inner .price :not(del) .amount bdi",
+  },
   { domain: "farmaciagloria.mx", selector: '.current-price [itemprop="price"]' },
   {
     domain: "farmaciaherrera.com.mx",
@@ -38,6 +44,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   { domain: "farmaciaproderma.com", selector: ".summary .price .amount bdi" },
   { domain: "farmaciasanisidro.mx", selector: ".price .amount bdi" },
   { domain: "farmaciasbazar.com", selector: ".precio" },
+  { domain: "farmaciasdelnino.mx", selector: 'form[name="frmdetalle"] .oferta' },
   {
     domain: "farmaciasespecializadas.com",
     selector: ".product-info-main .price-final_price .price",
@@ -51,6 +58,11 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     domain: "farmaciasguadalajara.com",
     selector: '[itemprop="price"], .product-info-main-section .sales .value',
   },
+  {
+    domain: "farmaciahospitalsatelite.com",
+    selector: ".elementor-jet-single-price .price .amount bdi",
+  },
+  { domain: "farmaciasmedina.com", selector: ".product-details .new-price" },
   { domain: "farmaciasanjorge.com", selector: ".price--highlight" },
   { domain: "farmaciasanpablo.com.mx", selector: ".priceTotal" },
   { domain: "farmaleal.com.mx", selector: ".price .price-item" },
@@ -74,13 +86,20 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   },
   { domain: "perfumesclub.com.mx", selector: ".totalMT2" },
   { domain: "prixz.com", selector: ".price .amount bdi" },
+  { domain: "probemedic.mx", selector: "[data-price-amount] .price" },
+  { domain: "promedicfarmasj.com", selector: ".summary-inner .price .amount bdi" },
   { domain: "sanapiel.com.mx", selector: ".product-info-price .price__regular .price-item" },
   { domain: "sanborns.com.mx", selector: '[class^="stylesDataPrice_pPrice__"]' },
+  { domain: "sfe.com.mx", selector: ".detail-price .money" },
   { domain: "sears.com.mx", selector: ".pPrice" },
   { domain: "sephora.com.mx", selector: ".price-box" },
   { domain: "skingroupstore.mx", selector: "[data-product-price]" },
   { domain: "skinsensepharma.com", selector: ".product-price" },
   { domain: "skn.com.mx", selector: ".current-price" },
+  {
+    domain: "storeboehringer.com",
+    selector: ".md\\:w-\\[25\\%\\] .md\\:block .bold.text-xl.text-green-500",
+  },
   { domain: "sweetcare.com", selector: ".pvp" },
   { domain: "vidafarmacias.com", selector: ".product-prices .price" },
   { domain: "walmart.com.mx", selector: '[itemprop="price"]' },

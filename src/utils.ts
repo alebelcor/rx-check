@@ -26,7 +26,10 @@ export function extractPrice(selector: string) {
       }
     }
 
-    const priceText = (element.textContent ?? "").trim();
+    let priceText = (element.textContent ?? "").trim();
+
+    // If there are decimals and more than two, keep only the first two after the decimal point
+    priceText = priceText.replace(/(\.\d{2})\d+/, "$1");
 
     // $1,234.56 MXN
     // $1,234 MXN
