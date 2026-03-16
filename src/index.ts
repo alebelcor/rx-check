@@ -9,6 +9,12 @@ import { BROWSER_CONTEXT_OPTIONS, BROWSER_LAUNCH_OPTIONS, createInitScript } fro
 import { getPrettyResults, delay, getResult, processResults } from "./utils";
 import type { Result } from "./types";
 
+type Config = {
+  name?: string;
+  sku?: string;
+  urls: string[];
+};
+
 const CONFIG_DIR = join(dirname(fileURLToPath(import.meta.url)), "..", "config");
 
 function getConfigIds() {
@@ -61,7 +67,7 @@ async function main() {
     return;
   }
 
-  const config = await loadConfig(rx);
+  const config: Config = await loadConfig(rx);
 
   const browser = await chromium.launch(BROWSER_LAUNCH_OPTIONS);
 
@@ -94,8 +100,14 @@ async function main() {
 
   const processedResults = processResults(results);
 
-  console.log(config.name);
-  console.log("\nSKU: " + config.sku);
+  if (config.name) {
+    console.log(config.name);
+  }
+
+  if (config.sku) {
+    console.log("\nSKU: " + config.sku);
+  }
+
   console.log("\n" + getPrettyResults(processedResults).toString());
 }
 
