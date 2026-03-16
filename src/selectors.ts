@@ -25,12 +25,17 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   { domain: "fahorro.com", selector: ".product-info-main .price-box .price" },
   { domain: "farmaciaalicia.com.mx", selector: ".product-block .price" },
   { domain: "farmaciasbazar.com", selector: ".precio" },
+  { domain: "farmaciacoyoacan.com", selector: ".price__regular .price-item" },
   {
     domain: "farmaciacutem.com",
     selector:
       ".rtin-price-area .price ins .amount bdi, .rtin-price-area .price :not(del) .amount bdi",
   },
-  { domain: "farmaciasfleming.mx", selector: ".wpb_wrapper .price ins .amount bdi" },
+  {
+    domain: "farmaciasfleming.mx",
+    selector:
+      ".wpb-content-wrapper .wpb_wrapper .price > .amount bdi, .wpb-content-wrapper .wpb_wrapper .price :not(del) .amount bdi",
+  },
   { domain: "farmaciagloria.mx", selector: '.current-price [itemprop="price"]' },
   { domain: "farmaciasguadalajara.com", selector: '[itemprop="price"]' },
   {
@@ -45,6 +50,13 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   { domain: "farmaciasanisidro.mx", selector: ".price .amount bdi" },
   { domain: "farmaciasanjorge.com", selector: ".price--highlight" },
   { domain: "farmaciasanpablo.com.mx", selector: ".priceTotal" },
+  { domain: "farmaleal.com.mx", selector: ".price .price-item" },
+  {
+    domain: "farmatodo.com.mx",
+    selector: '[class*="--sku-selector"] [class*="-currencyContainer"]',
+  },
+  { domain: "farmasmart.com", selector: "#main div > span.tw-sr-only" },
+  { domain: "farmavrim.com.mx", selector: ".price .price-item" },
   { domain: "frenchbeautyhub.com", selector: ".product__price span .visually-hidden" },
   { domain: "heb.com.mx", selector: ".price" },
   { domain: "isdin.com", selector: '[data-testid="price-component"] [data-testid="titleElement"]' },
@@ -67,6 +79,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   { domain: "skinsensepharma.com", selector: ".product-price" },
   { domain: "skingroupstore.mx", selector: "[data-product-price]" },
   { domain: "sweetcare.com", selector: ".pvp" },
+  { domain: "vidafarmacias.com", selector: ".product-prices .price" },
   { domain: "walmart.com.mx", selector: '[itemprop="price"]' },
   { domain: "wecarepharma.mx", selector: ".price__current .money" },
   { domain: "yza.mx", selector: ".large-price" },
