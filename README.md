@@ -2,6 +2,8 @@
 
 > Pharmacy price scrapper
 
+Simple script for checking prices of [a bunch](https://github.com/alebelcor/rx-check/blob/main/src/selectors.ts) of pharmacy's online stores.
+
 ## Usage
 
 1. Clone repo
