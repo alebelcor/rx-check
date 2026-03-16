@@ -27,40 +27,14 @@ export function extractPrice(selector: string) {
     }
 
     let priceText = (element.textContent ?? "").trim();
-
     // If there are decimals and more than two, keep only the first two after the decimal point
     priceText = priceText.replace(/(\.\d{2})\d+/, "$1");
 
-    // $1,234.56 MXN
-    // $1,234 MXN
-    // $1,234.56
-    // $1,234
-    // 1,234.56 MXN
-    // 1,234 MXN
-    // MXN $1,234.56
-    // MXN $1,234
-    // MXN 1,234.56
-    // MXN 1,234
-    // $1234.56 MXN
-    // $1234 MXN
-    // $1234.56
-    // $1234
-    // 1234.56 MXN
-    // 1234 MXN
-    // MXN $1234.56
-    // MXN $1234
-    // MXN 1234.56
-    // MXN 1234
-    const priceRegex = /(?:MXN\s+)?\$?(?:\d{1,3}(?:,\d{3})*|\d+)(?:\.\d+)?(?:\s+MXN)?/g;
+    // Remove non-numeric characters and parse the price
+    const price = Number.parseFloat(priceText.replace(/[^0-9.]/g, ""));
 
-    let matches: RegExpExecArray | null;
-
-    while ((matches = priceRegex.exec(priceText)) !== null) {
-      const price = Number.parseFloat(matches[0].replace(/[^0-9.]/g, ""));
-
-      if (!Number.isNaN(price) && price > 0) {
-        return price;
-      }
+    if (!Number.isNaN(price) && price > 0) {
+      return price;
     }
   }
 
