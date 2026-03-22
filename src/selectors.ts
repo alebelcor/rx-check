@@ -112,7 +112,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   { domain: "isdin.com", selector: '[data-testid="price-component"] [data-testid="titleElement"]' },
   {
     domain: "klyns.mx",
-    selector: ".vtex-product-price-1-x-sellingPriceValue .vtex-product-price-1-x-currencyContainer",
+    selector: '[class*="-sellingPriceValue"]',
   },
   { domain: "liverpool.com.mx", selector: ".a-product__paragraphDiscountPrice" },
   {
@@ -124,7 +124,10 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     selector: ".product__info-block :is(.price__sale, .price__regular) .price-item",
   },
   { domain: "perfumesclub.com.mx", selector: ".totalMT2" },
-  { domain: "prixz.com", selector: ".price .amount > bdi" },
+  {
+    domain: "prixz.com",
+    selector: ".summary .price ins .amount > bdi, .summary .price > .price-discount .amount > bdi",
+  },
   { domain: "probemedic.mx", selector: "[data-price-amount] .price" },
   {
     domain: "promedicfarmasj.com",
@@ -133,7 +136,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   { domain: "sanapiel.com.mx", selector: ".product-info-price .price__regular .price-item" },
   { domain: "sanborns.com.mx", selector: '[class^="stylesDataPrice_pPrice__"]' },
   { domain: "sfe.com.mx", selector: ".detail-price .money" },
-  { domain: "sears.com.mx", selector: ".pPrice" },
+  { domain: "sears.com.mx", selector: '.pPrice, [class*="_pPrice"]' },
   { domain: "sephora.com.mx", selector: ".price-box" },
   { domain: "skingroupstore.mx", selector: "[data-product-price]" },
   { domain: "skinsensepharma.com", selector: ".product-price" },
@@ -144,7 +147,6 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   },
   { domain: "sweetcare.com", selector: ".pvp" },
   { domain: "vidafarmacias.com", selector: ".product-prices .price" },
-  { domain: "walmart.com.mx", selector: '[itemprop="price"]' },
   { domain: "wecarepharma.mx", selector: ".price__current .money" },
   { domain: "yza.mx", selector: '.price .value:not([content="null"])' },
 ] as const;
