@@ -1,4 +1,4 @@
-// fix all .amount
+// fix all selectors that don't have two parts
 export const PRICE_SELECTORS_BY_DOMAIN = [
   { domain: "amanda.com.mx", selector: ".summary .price .amount" },
   { domain: "amazon.com.mx", selector: ".apex-core-price-identifier .a-offscreen" },
@@ -6,7 +6,10 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   { domain: "bodegaaurrera.com.mx", selector: '[itemprop="price"]' },
   { domain: "caretobeauty.com", selector: ".product-view__price--final-price" },
   { domain: "centrodrma.com", selector: ".product-price-current" },
-  { domain: "cityderm.mx", selector: ".summary .price ins .amount bdi" },
+  {
+    domain: "cityderm.mx",
+    selector: ".summary .price ins .amount > bdi, .summary .price > .amount > bdi",
+  },
   { domain: "claroshop.com", selector: '[class^="stylesShopData_priceSale__"]' },
   { domain: "costco.com.mx", selector: ".product-price-amount sip-format-price" },
   { domain: "cruzrosa.mx", selector: ".product-price--original" },
@@ -14,13 +17,25 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     domain: "cuiderma.com",
     selector: ".product__block--product-header-inner .product__price [data-price]",
   },
-  { domain: "curitek.com", selector: ".summary .price .amount .int-ck" },
+  {
+    domain: "curitek.com",
+    selector: ".summary .price ins .amount > bdi, .summary .price > .amount > bdi",
+  },
   { domain: "derma.shop", selector: '[itemprop="price"]' },
-  { domain: "dermabalance.com.mx", selector: ".summary .price .amount bdi" },
+  {
+    domain: "dermabalance.com.mx",
+    selector: ".summary .price ins .amount > bdi, .summary .price > .amount > bdi",
+  },
   { domain: "dermaexpress.com.mx", selector: "[data-product-price]" },
-  { domain: "dermamedic.com.mx", selector: ".summary .price .amount bdi" },
+  {
+    domain: "dermamedic.com.mx",
+    selector: ".summary .price ins .amount > bdi, .summary .price > .amount > bdi",
+  },
   { domain: "dermamedina.com", selector: ".product__price-and-ratings [data-price]" },
-  { domain: "dermatica.com.mx", selector: ".product-detail .price .amount" },
+  {
+    domain: "dermatica.com.mx",
+    selector: ".product-detail .price > .amount, .product-detail .price > ins > .amount",
+  },
   { domain: "dermocutanea.com", selector: '[data-hook="product-prices-wrapper"] [data-wix-price]' },
   {
     domain: "emeritafarmacias.com",
@@ -36,21 +51,27 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   { domain: "farmaciacoyoacan.com", selector: ".price__regular .price-item" },
   {
     domain: "farmaciacutem.com",
-    selector:
-      ".rtin-price-area .price ins .amount bdi, .rtin-price-area .price :not(del) .amount bdi",
+    selector: ".rtin-price-area .price ins .amount > bdi, .rtin-price-area .price > .amount > bdi",
   },
   {
     domain: "farmaciadechila.com",
     selector:
-      ".product-information-inner .price .amount bdi, .product-information-inner .price :not(del) .amount bdi",
+      ".product-information-inner .price ins .amount > bdi, .product-information-inner .price > .amount > bdi",
   },
   { domain: "farmaciagloria.mx", selector: '.current-price [itemprop="price"]' },
   {
     domain: "farmaciaherrera.com.mx",
     selector: ".product-info__price .price__default .price__current",
   },
-  { domain: "farmaciaproderma.com", selector: ".summary .price .amount bdi" },
-  { domain: "farmaciasanisidro.mx", selector: ".price .amount bdi" },
+  {
+    domain: "farmaciaproderma.com",
+    selector: ".summary .price ins .amount > bdi, .summary .price > .amount > bdi",
+  },
+  {
+    domain: "farmaciasanisidro.mx",
+    selector:
+      ".elementor-widget-container .price ins .amount > bdi, .elementor-widget-container .price > .amount > bdi",
+  },
   { domain: "farmaciasbazar.com", selector: ".precio" },
   { domain: "farmaciasdelnino.mx", selector: 'form[name="frmdetalle"] .oferta' },
   {
@@ -59,8 +80,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   },
   {
     domain: "farmaciasfleming.mx",
-    selector:
-      ".wpb-content-wrapper .wpb_wrapper .price > .amount bdi, .wpb-content-wrapper .wpb_wrapper .price :not(del) .amount bdi",
+    selector: ".wd-single-price .price ins .amount > bdi, .wd-single-price .price > .amount > bdi",
   },
   {
     domain: "farmaciasguadalajara.com",
@@ -68,7 +88,8 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   },
   {
     domain: "farmaciahospitalsatelite.com",
-    selector: ".elementor-jet-single-price .price .amount bdi",
+    selector:
+      ".elementor-jet-single-price .price ins .amount > bdi, .elementor-jet-single-price .price > .amount > bdi",
   },
   { domain: "farmaciasmedina.com", selector: ".product-details .new-price" },
   { domain: "farmaciasanjorge.com", selector: ".price--highlight" },
@@ -97,9 +118,12 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     selector: ".product__info-block :is(.price__sale, .price__regular) .price-item",
   },
   { domain: "perfumesclub.com.mx", selector: ".totalMT2" },
-  { domain: "prixz.com", selector: ".price .amount bdi" },
+  { domain: "prixz.com", selector: ".price .amount > bdi" },
   { domain: "probemedic.mx", selector: "[data-price-amount] .price" },
-  { domain: "promedicfarmasj.com", selector: ".summary-inner .price .amount bdi" },
+  {
+    domain: "promedicfarmasj.com",
+    selector: ".summary-inner .price ins .amount > bdi, .summary-inner .price > .amount > bdi",
+  },
   { domain: "sanapiel.com.mx", selector: ".product-info-price .price__regular .price-item" },
   { domain: "sanborns.com.mx", selector: '[class^="stylesDataPrice_pPrice__"]' },
   { domain: "sfe.com.mx", selector: ".detail-price .money" },
