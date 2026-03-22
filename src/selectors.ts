@@ -2,8 +2,7 @@
 export const PRICE_SELECTORS_BY_DOMAIN = [
   { domain: "amanda.com.mx", selector: ".summary .price .amount" },
   { domain: "amazon.com.mx", selector: ".apex-core-price-identifier .a-offscreen" },
-  { domain: "benavides.com.mx", selector: ".price" },
-  { domain: "bodegaaurrera.com.mx", selector: '[itemprop="price"]' },
+  { domain: "benavides.com.mx", selector: ".price-final_price .price" },
   { domain: "caretobeauty.com", selector: ".product-view__price--final-price" },
   { domain: "centrodrma.com", selector: ".product-price-current" },
   {
@@ -11,7 +10,10 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     selector: ".summary .price ins .amount > bdi, .summary .price > .amount > bdi",
   },
   { domain: "claroshop.com", selector: '[class^="stylesShopData_priceSale__"]' },
-  { domain: "costco.com.mx", selector: ".product-price-amount sip-format-price" },
+  {
+    domain: "costco.com.mx",
+    selector: ".price-after-discount .you-pay-value, .product-price-amount sip-format-price",
+  },
   { domain: "cruzrosa.mx", selector: ".product-price--original" },
   {
     domain: "cuiderma.com",
