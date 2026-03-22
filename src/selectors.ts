@@ -94,15 +94,19 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
       ".elementor-jet-single-price .price ins .amount > bdi, .elementor-jet-single-price .price > .amount > bdi",
   },
   { domain: "farmaciasmedina.com", selector: ".product-details .new-price" },
-  { domain: "farmaciasanjorge.com", selector: ".price--highlight" },
+  {
+    domain: "farmaciasanjorge.com",
+    selector: ".product-form .price-list :is(.price--highlight, .price)",
+  },
   { domain: "farmaciasanpablo.com.mx", selector: ".priceTotal" },
-  { domain: "farmaleal.com.mx", selector: ".price .price-item" },
+  { domain: "farmaleal.com.mx", selector: ".price__sale .price-item--last" },
   {
     domain: "farmatodo.com.mx",
-    selector: '[class*="--sku-selector"] [class*="-currencyContainer"]',
+    selector:
+      '[class*="--sku-selector"] [class*="-price_sellingPriceContainer"] [class*="-currencyContainer"]',
   },
   { domain: "farmasmart.com", selector: "#main div > span.tw-sr-only" },
-  { domain: "farmavrim.com.mx", selector: ".price .price-item" },
+  { domain: "farmavrim.com.mx", selector: ".price__sale .price-item--last" },
   { domain: "frenchbeautyhub.com", selector: ".product__price span .visually-hidden" },
   { domain: "heb.com.mx", selector: ".price" },
   { domain: "isdin.com", selector: '[data-testid="price-component"] [data-testid="titleElement"]' },
