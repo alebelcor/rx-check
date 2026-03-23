@@ -5,6 +5,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   { domain: "benavides.com.mx", selector: ".price-final_price .price" },
   { domain: "caretobeauty.com", selector: ".product-view__price--final-price" },
   { domain: "centrodrma.com", selector: ".product-price-current" },
+  { domain: "clickderma.com.mx", selector: ".block-price .element-price" },
   {
     domain: "cityderm.mx",
     selector: ".summary .price ins .amount > bdi, .summary .price > .amount > bdi",
@@ -28,6 +29,10 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     domain: "dermabalance.com.mx",
     selector: ".summary .price ins .amount > bdi, .summary .price > .amount > bdi",
   },
+  {
+    domain: "dermatologicocountry.com",
+    selector: ".et_pb_module .price ins .amount > bdi, .et_pb_module .price > .amount > bdi",
+  },
   { domain: "dermaexpress.com.mx", selector: "[data-product-price]" },
   {
     domain: "dermamedic.com.mx",
@@ -38,6 +43,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     domain: "dermatica.com.mx",
     selector: ".product-detail .price > .amount, .product-detail .price > ins > .amount",
   },
+  { domain: "derma-zona.com", selector: '.js_product [itemprop="price"]' },
   { domain: "dermocutanea.com", selector: '[data-hook="product-prices-wrapper"] [data-wix-price]' },
   {
     domain: "emeritafarmacias.com",
@@ -86,7 +92,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   },
   {
     domain: "farmaciasguadalajara.com",
-    selector: '[itemprop="price"], .product-info-main-section .sales .value',
+    selector: ".product-info-main-section .sales",
   },
   {
     domain: "farmaciahospitalsatelite.com",
@@ -114,6 +120,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     domain: "klyns.mx",
     selector: '[class*="-sellingPriceValue"]',
   },
+  { domain: "laherrera.mx", selector: ".product-price .price__current" },
   { domain: "liverpool.com.mx", selector: ".a-product__paragraphDiscountPrice" },
   {
     domain: "mecdermafarmacia.com",
@@ -124,6 +131,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     selector: ".product__info-block :is(.price__sale, .price__regular) .price-item",
   },
   { domain: "perfumesclub.com.mx", selector: ".totalMT2" },
+  { domain: "prodermica.com.mx", selector: ".product-price .new-price" },
   {
     domain: "prixz.com",
     selector: ".summary .price ins .amount > bdi, .summary .price > .price-discount .amount > bdi",
