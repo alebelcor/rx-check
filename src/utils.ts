@@ -16,7 +16,7 @@ export function extractPrice(selector: string) {
 
   if (element) {
     // remove potential sibling/descendant elements polluting the price container
-    const toRemoveClasses = [".antes", ".contDiscount"];
+    const toRemoveClasses = [".antes", ".contDiscount", ".undefined"];
 
     for (const className of toRemoveClasses) {
       const toRemove = element.querySelector(className);
