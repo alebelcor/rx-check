@@ -43,6 +43,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     domain: "dermatica.com.mx",
     selector: ".product-detail .price > .amount, .product-detail .price > ins > .amount",
   },
+  { domain: "dermayeo.com", selector: ".ProductMeta .Price" },
   { domain: "derma-zona.com", selector: '.js_product [itemprop="price"]' },
   { domain: "dermocutanea.com", selector: '[data-hook="product-prices-wrapper"] [data-wix-price]' },
   {
@@ -121,6 +122,10 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     selector: '[class*="-sellingPriceValue"]',
   },
   { domain: "laherrera.mx", selector: ".product-price .price__current" },
+  {
+    domain: "ledermafarmacia.com",
+    selector: ".summary .price ins .amount > bdi, .summary .price > .amount > bdi",
+  },
   { domain: "liverpool.com.mx", selector: ".a-product__paragraphDiscountPrice" },
   {
     domain: "mecdermafarmacia.com",
@@ -154,6 +159,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     selector: ".md\\:w-\\[25\\%\\] .md\\:block .bold.text-xl.text-green-500",
   },
   { domain: "sweetcare.com", selector: ".pvp" },
+  { domain: "topicrem.mx", selector: "[data-price] [data-sale-price]" },
   { domain: "vidafarmacias.com", selector: ".product-prices .price" },
   { domain: "wecarepharma.mx", selector: ".price__current .money" },
   { domain: "yza.mx", selector: '.price .value:not([content="null"])' },
