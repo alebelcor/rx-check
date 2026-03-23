@@ -7,6 +7,10 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   { domain: "centrodrma.com", selector: ".product-price-current" },
   { domain: "clickderma.com.mx", selector: ".block-price .element-price" },
   {
+    domain: "clinicadermafarmacia.com",
+    selector: ".summary .price ins .amount > bdi, .summary .price > .amount > bdi",
+  },
+  {
     domain: "cityderm.mx",
     selector: ".summary .price ins .amount > bdi, .summary .price > .amount > bdi",
   },
@@ -30,8 +34,9 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     selector: ".summary .price ins .amount > bdi, .summary .price > .amount > bdi",
   },
   {
-    domain: "dermatologicocountry.com",
-    selector: ".et_pb_module .price ins .amount > bdi, .et_pb_module .price > .amount > bdi",
+    domain: "dermacarepharmacy.com",
+    selector:
+      ".elementor-widget-container .price ins .amount > bdi, .elementor-widget-container .price > .amount > bdi",
   },
   { domain: "dermaexpress.com.mx", selector: "[data-product-price]" },
   {
@@ -43,13 +48,13 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     domain: "dermatica.com.mx",
     selector: ".product-detail .price > .amount, .product-detail .price > ins > .amount",
   },
+  {
+    domain: "dermatologicocountry.com",
+    selector: ".et_pb_module .price ins .amount > bdi, .et_pb_module .price > .amount > bdi",
+  },
   { domain: "dermayeo.com", selector: ".ProductMeta .Price" },
   { domain: "derma-zona.com", selector: '.js_product [itemprop="price"]' },
   { domain: "dermocutanea.com", selector: '[data-hook="product-prices-wrapper"] [data-wix-price]' },
-  {
-    domain: "emeritafarmacias.com",
-    selector: ".price > ins > .amount > bdi, .price > .amount > bdi",
-  },
   { domain: "evaderm.com.mx", selector: ".product-meta .price-list .price" },
   { domain: "fahorro.com", selector: ".product-info-main .price-box .price" },
   {
@@ -91,6 +96,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     domain: "farmaciasfleming.mx",
     selector: ".wd-single-price .price ins .amount > bdi, .wd-single-price .price > .amount > bdi",
   },
+  { domain: "farmaciasfocal.com", selector: ".product-shop .money" },
   {
     domain: "farmaciasguadalajara.com",
     selector: ".product-info-main-section .sales",
@@ -115,6 +121,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   { domain: "farmasmart.com", selector: "#main div > span.tw-sr-only" },
   { domain: "farmavrim.com.mx", selector: ".price__sale .price-item--last" },
   { domain: "frenchbeautyhub.com", selector: ".product__price span .visually-hidden" },
+  { domain: "hautboutique.com", selector: "[data-price] [data-sale-price]" },
   { domain: "heb.com.mx", selector: ".price" },
   { domain: "isdin.com", selector: '[data-testid="price-component"] [data-testid="titleElement"]' },
   {
@@ -159,6 +166,10 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     selector: ".md\\:w-\\[25\\%\\] .md\\:block .bold.text-xl.text-green-500",
   },
   { domain: "sweetcare.com", selector: ".pvp" },
+  {
+    domain: "theglowshop.mx",
+    selector: ".summary .price ins .amount > bdi, .summary .price > .amount > bdi",
+  },
   { domain: "topicrem.mx", selector: "[data-price] [data-sale-price]" },
   { domain: "vidafarmacias.com", selector: ".product-prices .price" },
   { domain: "wecarepharma.mx", selector: ".price__current .money" },
