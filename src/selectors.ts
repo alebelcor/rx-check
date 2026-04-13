@@ -1,4 +1,3 @@
-// fix all selectors that don't have two parts
 export const PRICE_SELECTORS_BY_DOMAIN = [
   { domain: "amanda.com.mx", selector: ".summary .price .amount" },
   { domain: "amazon.com.mx", selector: ".apex-core-price-identifier .a-offscreen" },
