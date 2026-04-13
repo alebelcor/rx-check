@@ -5,6 +5,10 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   { domain: "benavides.com.mx", selector: ".price-final_price .price" },
   { domain: "caretobeauty.com", selector: ".product-view__price--final-price" },
   { domain: "centrodrma.com", selector: ".product-price-current" },
+  {
+    domain: "chedraui.com.mx",
+    selector: ".chedrauimx-products-simulator-0-x-simulatedSellingPrice",
+  },
   { domain: "clickderma.com.mx", selector: ".block-price .element-price" },
   {
     domain: "clinicadermafarmacia.com",
@@ -93,7 +97,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   {
     domain: "farmaciasanisidro.mx",
     selector:
-      ".elementor-widget-container .price ins .amount > bdi, .elementor-widget-container .price > .amount > bdi",
+      ".elementor-widget-container .fsi-price-sale> .amount > bdi, .elementor-widget-container .fsi-price-normal > .amount > bdi",
   },
   { domain: "farmaciasbazar.com", selector: ".precio" },
   { domain: "farmaciasdelnino.mx", selector: 'form[name="frmdetalle"] .oferta' },
