@@ -78,6 +78,15 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     selector: ".product-info__price .price__default .price__current",
   },
   {
+    domain: "farmaciahospitalsatelite.com",
+    selector:
+      ".elementor-jet-single-price .price ins .amount > bdi, .elementor-jet-single-price .price > .amount > bdi",
+  },
+  {
+    domain: "farmacialapaz.com.mx",
+    selector: ".ficha_producto_psk .ficha_producto_psk__price-current",
+  },
+  {
     domain: "farmaciaproderma.com",
     selector: ".summary .price ins .amount > bdi, .summary .price > .amount > bdi",
   },
@@ -101,11 +110,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     domain: "farmaciasguadalajara.com",
     selector: ".product-info-main-section .sales",
   },
-  {
-    domain: "farmaciahospitalsatelite.com",
-    selector:
-      ".elementor-jet-single-price .price ins .amount > bdi, .elementor-jet-single-price .price > .amount > bdi",
-  },
+  { domain: "farmaciashdezsante.com", selector: ".price__sale .price-item--last" },
   { domain: "farmaciasmedina.com", selector: ".product-details .new-price" },
   {
     domain: "farmaciasanjorge.com",
@@ -143,12 +148,13 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     selector: ".product__info-block :is(.price__sale, .price__regular) .price-item",
   },
   { domain: "perfumesclub.com.mx", selector: ".totalMT2" },
-  { domain: "prodermica.com.mx", selector: ".product-price .new-price" },
+  { domain: "presalud.com", selector: ".oe_price .oe_currency_value" },
   {
     domain: "prixz.com",
     selector: ".summary .price ins .amount > bdi, .summary .price > .price-discount .amount > bdi",
   },
   { domain: "probemedic.mx", selector: "[data-price-amount] .price" },
+  { domain: "prodermica.com.mx", selector: ".product-price .new-price" },
   {
     domain: "promedicfarmasj.com",
     selector: ".summary-inner .price ins .amount > bdi, .summary-inner .price > .amount > bdi",
@@ -174,6 +180,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   { domain: "vidafarmacias.com", selector: ".product-prices .price" },
   { domain: "wecarepharma.mx", selector: ".price__current .money" },
   { domain: "yza.mx", selector: '.price .value:not([content="null"])' },
+  { domain: "zuca.mx", selector: ".productView-price .price__last .price-item" },
 ] as const;
 
 export function getPriceSelector(hostname: string) {
