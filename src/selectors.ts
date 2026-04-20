@@ -2,6 +2,11 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   { domain: "amanda.com.mx", selector: ".summary .price .amount" },
   { domain: "amazon.com.mx", selector: ".apex-core-price-identifier .a-offscreen" },
   { domain: "benavides.com.mx", selector: ".price-final_price .price" },
+  {
+    domain: "buscamed.com",
+    selector: "article > div.space-y-5.lg\\:space-y-3 > div:nth-child(2) > span",
+  },
+  { domain: "cadistribucion.mx", selector: ".js_product .oe_currency_value" },
   { domain: "caretobeauty.com", selector: ".product-view__price--final-price" },
   { domain: "centrodrma.com", selector: ".product-price-current" },
   {
@@ -58,6 +63,10 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   { domain: "dermayeo.com", selector: ".ProductMeta .Price" },
   { domain: "derma-zona.com", selector: '.js_product [itemprop="price"]' },
   { domain: "dermocutanea.com", selector: '[data-hook="product-prices-wrapper"] [data-wix-price]' },
+  {
+    domain: "distribuidoragalarza.com.mx",
+    selector: ".summary .price ins .amount > bdi, .summary .price > .amount > bdi",
+  },
   { domain: "evaderm.com.mx", selector: ".product-meta .price-list .price" },
   { domain: "fahorro.com", selector: ".product-info-main .price-box .price" },
   {
@@ -121,6 +130,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   },
   { domain: "farmaciasanpablo.com.mx", selector: ".priceTotal" },
   { domain: "farmaleal.com.mx", selector: ".price__sale .price-item--last" },
+  { domain: "farmalisto.com.mx", selector: ".current-price-display.price" },
   {
     domain: "farmatodo.com.mx",
     selector:
@@ -128,14 +138,21 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   },
   { domain: "farmasmart.com", selector: "#main div > span.tw-sr-only" },
   { domain: "farmavrim.com.mx", selector: ".price__sale .price-item--last" },
+  { domain: "fgonsar.com", selector: ".price__sale .price-item--last" },
   { domain: "frenchbeautyhub.com", selector: ".product__price span .visually-hidden" },
   { domain: "hautboutique.com", selector: "[data-price] [data-sale-price]" },
   { domain: "heb.com.mx", selector: ".price" },
+  {
+    domain: "ifarma.com.mx",
+    selector:
+      ".elementor-widget-container .price ins .amount > bdi, .elementor-widget-container .price > .amount > bdi",
+  },
   { domain: "isdin.com", selector: '[data-testid="price-component"] [data-testid="titleElement"]' },
   {
     domain: "klyns.mx",
     selector: '[class*="-sellingPriceValue"]',
   },
+  { domain: "lacomer.com.mx", selector: '[itemprop="offers"] .txt-whitout-line' },
   { domain: "laherrera.mx", selector: ".product-price .price__current" },
   {
     domain: "ledermafarmacia.com",
@@ -146,6 +163,8 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     domain: "mecdermafarmacia.com",
     selector: ".price__regular .price-item.price-item--regular",
   },
+  { domain: "mercadofarma.com.mx", selector: ".main-container .price__sale .price-item--last" },
+  { domain: "mvonline.com.mx", selector: '[itemscope="itemscope"] .oe_currency_value' },
   {
     domain: "openfarma.mx",
     selector: ".product__info-block :is(.price__sale, .price__regular) .price-item",
@@ -164,6 +183,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   },
   { domain: "sanapiel.com.mx", selector: ".product-info-price .price__regular .price-item" },
   { domain: "sanborns.com.mx", selector: '[class^="stylesDataPrice_pPrice__"]' },
+  { domain: "sanorim.mx", selector: "#main-product .price" },
   { domain: "sfe.com.mx", selector: ".detail-price .money" },
   { domain: "sears.com.mx", selector: '.pPrice, [class*="_pPrice"]' },
   { domain: "sephora.com.mx", selector: ".price-box" },
