@@ -46,7 +46,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     selector:
       ".elementor-widget-container .price ins .amount > bdi, .elementor-widget-container .price > .amount > bdi",
   },
-  { domain: "dermaenlinea.com.mx", selector: "[data-product-price]" },
+  { domain: "dermaenlinea.com.mx", selector: "[data-product-price] .visually-hidden" },
   { domain: "dermaexpress.com.mx", selector: "[data-product-price]" },
   { domain: "dermalia.com.mx", selector: ".precioElijePromo" },
   {
