@@ -46,7 +46,9 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     selector:
       ".elementor-widget-container .price ins .amount > bdi, .elementor-widget-container .price > .amount > bdi",
   },
+  { domain: "dermaenlinea.com.mx", selector: "[data-product-price]" },
   { domain: "dermaexpress.com.mx", selector: "[data-product-price]" },
+  { domain: "dermalia.com.mx", selector: ".precioElijePromo" },
   {
     domain: "dermamedic.com.mx",
     selector: ".summary .price ins .amount > bdi, .summary .price > .amount > bdi",
@@ -166,11 +168,25 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   { domain: "mercadofarma.com.mx", selector: ".main-container .price__sale .price-item--last" },
   { domain: "mvonline.com.mx", selector: '[itemscope="itemscope"] .oe_currency_value' },
   {
+    domain: "neodermaclinica.mx",
+    selector: ".summary .price ins .amount > bdi, .summary .price > .amount > bdi",
+  },
+  { domain: "oleofarmacia.mx", selector: '[data-hook="product-prices-wrapper"] [data-wix-price]' },
+  {
     domain: "openfarma.mx",
     selector: ".product__info-block :is(.price__sale, .price__regular) .price-item",
   },
   { domain: "perfumesclub.com.mx", selector: ".totalMT2" },
+  {
+    domain: "pielclinic.com",
+    selector: ".summary .price ins .amount > bdi, .summary .price > .amount > bdi",
+  },
+  { domain: "pielmarket.com.mx", selector: "[data-product-price]" },
   { domain: "presalud.com", selector: ".oe_price .oe_currency_value" },
+  {
+    domain: "puntopiel.com.mx",
+    selector: ".summary .price ins .amount > bdi, .summary .price > .amount > bdi",
+  },
   {
     domain: "prixz.com",
     selector: ".summary .price ins .amount > bdi, .summary .price > .price-discount .amount > bdi",
