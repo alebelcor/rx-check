@@ -37,11 +37,14 @@ export function extractPrice(selector: string) {
     // If there are decimals and more than two, keep only the first two after the decimal point
     priceText = priceText.replace(/(\.\d{2})\d+/, "$1");
 
-    // Replace `,00` with `.00` to avoid parsing errors
-    priceText = priceText.replace(",00", ".00");
+    // Replace `,00` suffix with `.00` to avoid parsing errors
+    priceText = priceText.replace(/,00$/, ".00");
 
-    // Remove non-numeric characters and parse the price
-    const price = Number.parseFloat(priceText.replace(/[^0-9.]/g, ""));
+    // Remove non-numeric characters
+    priceText.replace(/[^0-9.]/g, "");
+
+    // Parse the price
+    const price = Number.parseFloat(priceText);
 
     if (!Number.isNaN(price) && price > 0) {
       return price;
