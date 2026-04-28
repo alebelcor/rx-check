@@ -1,7 +1,11 @@
 export const PRICE_SELECTORS_BY_DOMAIN = [
-  { domain: "amanda.com.mx", selector: ".summary .price .amount" },
+  {
+    domain: "amanda.com.mx",
+    selector: ".summary .price ins .amount > bdi, .summary .price > .amount > bdi",
+  },
   { domain: "amazon.com.mx", selector: ".apex-core-price-identifier .a-offscreen" },
   { domain: "benavides.com.mx", selector: ".price-final_price .price" },
+  { domain: "brosh-mx.com", selector: "product-price .price__sale .price" },
   {
     domain: "buscamed.com",
     selector: "article > div.space-y-5.lg\\:space-y-3 > div:nth-child(2) > span",
@@ -60,7 +64,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   },
   {
     domain: "dermatologicocountry.com",
-    selector: ".et_pb_module .price ins .amount > bdi, .et_pb_module .price > .amount > bdi",
+    selector: ".et_pb_wc_price .price ins .amount > bdi, .et_pb_wc_price .price > .amount > bdi",
   },
   { domain: "dermayeo.com", selector: ".ProductMeta .Price" },
   { domain: "derma-zona.com", selector: '.js_product [itemprop="price"]' },
@@ -79,7 +83,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   { domain: "farmaciacoyoacan.com", selector: ".price__regular .price-item" },
   {
     domain: "farmaciacutem.com",
-    selector: ".rtin-price-area .price ins .amount > bdi, .rtin-price-area .price > .amount > bdi",
+    selector: ".product .price ins .amount > bdi, .product .price > .amount > bdi",
   },
   {
     domain: "farmaciadechila.com",
@@ -166,6 +170,10 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     selector: ".price__regular .price-item.price-item--regular",
   },
   { domain: "mercadofarma.com.mx", selector: ".main-container .price__sale .price-item--last" },
+  {
+    domain: "miderma.mx",
+    selector: ".et_pb_wc_price .price ins .amount > bdi, .et_pb_wc_price .price > .amount > bdi",
+  },
   { domain: "mvonline.com.mx", selector: '[itemscope="itemscope"] .oe_currency_value' },
   {
     domain: "neodermaclinica.mx",
