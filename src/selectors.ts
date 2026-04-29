@@ -48,7 +48,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   {
     domain: "dermacarepharmacy.com",
     selector:
-      ".elementor-widget-container .price ins .amount > bdi, .elementor-widget-container .price > .amount > bdi",
+      ".wd-section-stretch .price ins .amount > bdi, .wd-section-stretch .price > .amount > bdi",
   },
   { domain: "dermaenlinea.com.mx", selector: "[data-product-price] .visually-hidden" },
   { domain: "dermaexpress.com.mx", selector: "[data-product-price]" },

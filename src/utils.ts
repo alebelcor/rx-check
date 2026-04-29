@@ -35,13 +35,15 @@ export function extractPrice(selector: string) {
     let priceText = (element.textContent ?? "").trim();
 
     // If there are decimals and more than two, keep only the first two after the decimal point
-    priceText = priceText.replace(/(\.\d{2})\d+/, "$1");
+    priceText = priceText.replace(/(\.\d{2})\d+/, "$1").trim();
+
+    priceText = priceText.replaceAll("MXN", "").trim();
 
     // Replace `,00` suffix with `.00` to avoid parsing errors
-    priceText = priceText.replace(/,00$/, ".00");
+    priceText = priceText.replace(/,00$/, ".00").trim();
 
     // Remove non-numeric characters
-    priceText = priceText.replace(/[^0-9.]/g, "");
+    priceText = priceText.replace(/[^0-9.]/g, "").trim();
 
     // Parse the price
     const price = Number.parseFloat(priceText);
