@@ -41,7 +41,7 @@ export function extractPrice(selector: string) {
     priceText = priceText.replace(/,00$/, ".00");
 
     // Remove non-numeric characters
-    priceText.replace(/[^0-9.]/g, "");
+    priceText = priceText.replace(/[^0-9.]/g, "");
 
     // Parse the price
     const price = Number.parseFloat(priceText);

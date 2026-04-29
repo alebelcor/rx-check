@@ -57,7 +57,7 @@ export const BROWSER_LAUNCH_OPTIONS = {
 // https://playwright.dev/docs/api/class-browser#browser-new-context
 export const BROWSER_CONTEXT_OPTIONS = {
   userAgent:
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
   viewport: { width: 1920, height: 1080 },
   locale: "es-MX",
   timezoneId: "America/Mexico_City",
@@ -71,12 +71,12 @@ export const BROWSER_CONTEXT_OPTIONS = {
     "Cache-Control": "no-cache",
     Dnt: "1",
     Pragma: "no-cache",
-    "Sec-Ch-Ua": '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"',
+    "Sec-Ch-Ua": '"Google Chrome";v="147", "Not.A/Brand";v="8", "Chromium";v="147"',
     "Sec-Ch-Ua-Arch": '"arm"',
     "Sec-Ch-Ua-Bitness": '"64"',
-    "Sec-Ch-Ua-Full-Version": '"145.0.7632.117"',
+    "Sec-Ch-Ua-Full-Version": '"147.0.7727.102"',
     "Sec-Ch-Ua-Full-Version-List":
-      '"Not:A-Brand";v="99.0.0.0", "Google Chrome";v="145.0.7632.117", "Chromium";v="145.0.7632.117"',
+      '"Not:A-Brand";v="99.0.0.0", "Google Chrome";v="147.0.7727.102", "Chromium";v="147.0.7727.102"',
     "Sec-Ch-Ua-Mobile": "?0",
     "Sec-Ch-Ua-Model": '""',
     "Sec-Ch-Ua-Platform": '"macOS"',
@@ -182,7 +182,7 @@ const HARDWARE_SCRIPT = `
 (function() {
   try {
     Object.defineProperty(navigator, 'hardwareConcurrency', {
-      get: function() { return 8; },
+      get: function() { return 2; },
       enumerable: true,
       configurable: true
     });
