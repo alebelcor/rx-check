@@ -142,7 +142,6 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     selector:
       '[class*="--sku-selector"] [class*="-price_sellingPriceContainer"] [class*="-currencyContainer"]',
   },
-  { domain: "farmasmart.com", selector: "#main div > span.tw-sr-only" },
   { domain: "farmavrim.com.mx", selector: ".price__sale .price-item--last" },
   { domain: "fgonsar.com", selector: ".price__sale .price-item--last" },
   { domain: "frenchbeautyhub.com", selector: ".product__price span .visually-hidden" },
