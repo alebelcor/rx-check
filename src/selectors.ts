@@ -137,6 +137,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   { domain: "farmaciasanpablo.com.mx", selector: ".priceTotal" },
   { domain: "farmaleal.com.mx", selector: ".price__sale .price-item--last" },
   { domain: "farmalisto.com.mx", selector: ".current-price-display.price" },
+  { domain: "farmasmart.com", selector: ".tw-sr-only" },
   {
     domain: "farmatodo.com.mx",
     selector:
