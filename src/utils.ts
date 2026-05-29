@@ -17,7 +17,10 @@ export function extractPrice(selector: string) {
   if (element) {
     // remove potential sibling/descendant elements polluting the price container
     const toRemoveSelectors = [
+      // www.sanborns.com.mx
       '[class*="stylesDataPrice_contDiscount__"]',
+      // www.sears.com.mx
+      '[class*="stylesShopData_contDiscount__"]',
       ".antes",
       ".contDiscount",
       ".old-price",
