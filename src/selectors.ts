@@ -5,7 +5,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   },
   { domain: "amazon.com.mx", selector: ".apex-core-price-identifier .a-offscreen" },
   { domain: "benavides.com.mx", selector: ".price-final_price .price" },
-  { domain: "brosh-mx.com", selector: "product-price .price__sale .price" },
+  { domain: "brosh-mx.com", selector: "product-price .price" },
   {
     domain: "buscamed.com",
     selector: "article > div.space-y-5.lg\\:space-y-3 > div:nth-child(2) > span",
