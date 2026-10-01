@@ -174,6 +174,10 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
     domain: "miderma.mx",
     selector: ".et_pb_wc_price .price ins .amount > bdi, .et_pb_wc_price .price > .amount > bdi",
   },
+  {
+    domain: "mifarma.mx",
+    selector: ".current-price-value",
+  }
   { domain: "mvonline.com.mx", selector: '[itemscope="itemscope"] .oe_currency_value' },
   {
     domain: "neodermaclinica.mx",
