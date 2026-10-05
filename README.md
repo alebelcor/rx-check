@@ -12,5 +12,5 @@ Simple script for checking prices of [a bunch](https://github.com/alebelcor/rx-c
     - Export a `name` with a drug name (`string`, optional)
     - Export a `sku` with a SKU code (`string`, optional)
     - [Example](https://gist.github.com/alebelcor/fc4ad7c3cf5cb97c6eac91119297d458)
-3. Check prices, e.g. `pnpm dev --rx foo`
+3. Check prices, e.g. `pnpm dev` to select a configuration interactively, or `pnpm dev --rx foo` to select one directly
     - Results will be output in the terminal

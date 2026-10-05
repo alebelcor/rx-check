@@ -2,6 +2,7 @@ import { readdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { select } from "@inquirer/prompts";
 import meow from "meow";
 import { chromium } from "playwright";
 
@@ -34,18 +35,28 @@ async function loadConfig(id: string) {
   return module;
 }
 
+async function getConfigChoices() {
+  return Promise.all(
+    CONFIG_IDS.map(async (id) => {
+      const config: Config = await loadConfig(id);
+      return { name: config.name ?? id, value: id };
+    }),
+  );
+}
+
 const CONFIG_IDS = getConfigIds();
 
 const cli = meow(
   `
 	Usage
-	  $ rx-check --rx <id>
+	  $ rx-check [--rx <id>]
 
 	Options
-	  --rx, -r  (required)  [choices: ${CONFIG_IDS.join(", ")}]
+	  --rx, -r  [choices: ${CONFIG_IDS.join(", ")}]
 
 	Examples
 	  $ rx-check --rx l125
+	  $ rx-check
 `,
   {
     importMeta: import.meta,
@@ -60,9 +71,24 @@ const cli = meow(
 );
 
 async function main() {
-  const rx = cli.flags.rx;
+  let rx = cli.flags.rx;
 
-  if (rx === undefined || rx === "" || !CONFIG_IDS.includes(rx)) {
+  if (rx === undefined || rx === "") {
+    if (!process.stdin.isTTY || !process.stdout.isTTY) {
+      console.error(
+        `Interactive terminal required when --rx is omitted. Available configs: ${CONFIG_IDS.join(", ")}. Run with --rx <id>.`,
+      );
+      process.exitCode = 1;
+      return;
+    }
+
+    rx = await select({
+      message: "Select a configuration",
+      choices: await getConfigChoices(),
+    });
+  }
+
+  if (!CONFIG_IDS.includes(rx)) {
     cli.showHelp(1);
     return;
   }

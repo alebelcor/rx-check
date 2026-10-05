@@ -177,7 +177,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   {
     domain: "mifarma.mx",
     selector: ".current-price-value",
-  }
+  },
   { domain: "mvonline.com.mx", selector: '[itemscope="itemscope"] .oe_currency_value' },
   {
     domain: "neodermaclinica.mx",

@@ -9,9 +9,11 @@
     "lint": "concurrently --kill-others-on-fail --raw 'pnpm:lint:*'",
     "lint:scripts": "oxfmt --check . && oxlint .",
     "lint:types": "tsc",
+    "test": "tsx --test test/*.test.ts",
     "start": "NODE_ENV=production node dist/index.mjs"
   },
   "dependencies": {
+    "@inquirer/prompts": "8.7.3",
     "cli-table3": "0.6.5",
     "meow": "14.1.0",
     "playwright": "1.58.2"
