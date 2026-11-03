@@ -82,10 +82,19 @@ async function main() {
       return;
     }
 
-    rx = await select({
-      message: "Select a configuration",
-      choices: await getConfigChoices(),
-    });
+    try {
+      rx = await select({
+        message: "Select a configuration",
+        choices: await getConfigChoices(),
+      });
+    } catch (error) {
+      if (error instanceof Error && error.name === "ExitPromptError") {
+        process.exitCode = 130;
+        return;
+      }
+
+      throw error;
+    }
   }
 
   if (!CONFIG_IDS.includes(rx)) {
