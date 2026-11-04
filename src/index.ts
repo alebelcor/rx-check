@@ -46,6 +46,36 @@ async function getConfigChoices() {
 
 const CONFIG_IDS = getConfigIds();
 
+function createSpinner() {
+  if (!process.stderr.isTTY) {
+    return { update: (_message: string) => {}, stop: () => {} };
+  }
+
+  const frames = ["|", "/", "-", "\\"];
+  let frame = 0;
+  let message = "Checking prices...";
+
+  const render = () => {
+    process.stderr.write(`\r\x1B[2K${frames[frame]} ${message}`);
+    frame = (frame + 1) % frames.length;
+  };
+
+  const interval = setInterval(render, 100);
+  interval.unref();
+  render();
+
+  return {
+    update(nextMessage: string) {
+      message = nextMessage;
+      render();
+    },
+    stop() {
+      clearInterval(interval);
+      process.stderr.write("\r\x1B[2K");
+    },
+  };
+}
+
 const cli = meow(
   `
 	Usage
@@ -119,9 +149,12 @@ async function main() {
   // }
 
   const results: Result[] = [];
+  const spinner = createSpinner();
 
   try {
-    for (const url of config.urls) {
+    for (const [index, url] of config.urls.entries()) {
+      spinner.update(`Checking prices (${index + 1}/${config.urls.length})...`);
+
       await delay(1_500);
 
       results.push(await getResult(page, url));
@@ -129,6 +162,7 @@ async function main() {
   } catch (error) {
     console.error(`Unexpected error while getting all results:`, error);
   } finally {
+    spinner.stop();
     await context.close();
     await browser.close();
   }
