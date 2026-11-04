@@ -75,10 +75,6 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   },
   { domain: "evaderm.com.mx", selector: ".product-meta .price-list .price" },
   { domain: "fahorro.com", selector: ".product-info-main .price-box .price" },
-  {
-    domain: "farmaciallceutica.com.mx",
-    selector: ".price > ins > .amount > bdi, .price > .amount > bdi",
-  },
   { domain: "farmaciaalicia.com.mx", selector: ".product-block .price" },
   { domain: "farmaciacoyoacan.com", selector: ".price__regular .price-item" },
   {
@@ -201,7 +197,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   },
   {
     domain: "prixz.com",
-    selector: ".summary .price ins .amount > bdi, .summary .price > .price-discount .amount > bdi",
+    selector: ".summary .price ins .amount > bdi, .summary .price > .amount > bdi",
   },
   { domain: "probemedic.mx", selector: "[data-price-amount] .price" },
   { domain: "prodermica.com.mx", selector: ".product-price .new-price" },
