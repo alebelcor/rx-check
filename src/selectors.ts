@@ -5,10 +5,11 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   },
   { domain: "amazon.com.mx", selector: ".apex-core-price-identifier .a-offscreen" },
   { domain: "benavides.com.mx", selector: ".price-final_price .price" },
+  { domain: "bodegaaurrera.com.mx", selector: '[itemprop="price"]' },
   { domain: "brosh-mx.com", selector: "product-price .price" },
   {
     domain: "buscamed.com",
-    selector: "article > div.space-y-5.lg\\:space-y-3 > div:nth-child(2) > span",
+    selector: "#section-product span.sr-only.select-none",
   },
   { domain: "cadistribucion.mx", selector: ".js_product .oe_currency_value" },
   { domain: "caretobeauty.com", selector: ".product-view__price--final-price" },
@@ -143,7 +144,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   { domain: "fgonsar.com", selector: ".price__sale .price-item--last" },
   { domain: "frenchbeautyhub.com", selector: ".product__price span .visually-hidden" },
   { domain: "hautboutique.com", selector: "[data-price] [data-sale-price]" },
-  { domain: "heb.com.mx", selector: ".price" },
+  { domain: "heb.com.mx", selector: ".text-3xl.max-md\\:text-2xl" },
   {
     domain: "ifarma.com.mx",
     selector:
@@ -225,6 +226,7 @@ export const PRICE_SELECTORS_BY_DOMAIN = [
   },
   { domain: "topicrem.mx", selector: "[data-price] [data-sale-price]" },
   { domain: "vidafarmacias.com", selector: ".product-prices .price" },
+  { domain: "walmart.com.mx", selector: '[itemprop="price"]' },
   { domain: "wecarepharma.mx", selector: ".price__current .money" },
   { domain: "yza.mx", selector: '.price .value:not([content="null"])' },
   { domain: "zuca.mx", selector: ".productView-price .price__last .price-item" },
